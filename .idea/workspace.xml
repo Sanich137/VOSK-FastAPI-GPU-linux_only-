@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="Черновик, основная работа должна вестись под OS Linux.">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/VOSK-FastAPI-GPU(linux_only).iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recognizer/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recognizer/engine/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recognizer/engine/audio_recognition.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recognizer/engine/get_audio_file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recognizer/engine/sentensizer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/server_gpu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/audio_classify.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/is_alive.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/root.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/logging.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/pre_start_init.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/states_machine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vosk/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vosk/libvosk.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vosk/libvosk.so.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vosk/transcriber/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vosk/transcriber/cli.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vosk/transcriber/transcriber.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vosk/vosk_cffi.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2mvKGIvEGcS3Spc91Pe2hchItM8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/kojevnikov/PycharmProjects/VOSK-FastAPI-GPU(linux_only)/models"
+  }
+}]]></component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="C:\Users\kojevnikov\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="54cd8026-ea94-4c3b-bd41-576677ff6432" reportId="VOSK-FastAPI-GPU(linux_only)/qodana/2024-10-03" />
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kojevnikov\PycharmProjects\VOSK-FastAPI-GPU(linux_only)\models" />
+      <recent name="C:\Users\kojevnikov\PycharmProjects\VOSK-FastAPI-GPU(linux_only)" />
+      <recent name="C:\Users\kojevnikov\PycharmProjects\VOSK-FastAPI-GPU(linux_only)\utils" />
+      <recent name="C:\Users\kojevnikov\PycharmProjects\VOSK-FastAPI-GPU(linux_only)\routes" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-48aec45f0201-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17011.127" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="" />
+      <created>1727951513006</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727951513006</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Черновик, основная работа должна вестись под OS Linux." />
+    <option name="LAST_COMMIT_MESSAGE" value="Черновик, основная работа должна вестись под OS Linux." />
+  </component>
+</project>
