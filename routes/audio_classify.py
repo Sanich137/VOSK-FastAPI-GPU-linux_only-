@@ -1,9 +1,9 @@
 from utils.logging import logging
-from Classifier.engine.classification import define_category
+# from Classifier.engine.classification import define_category
 from utils.pre_start_init import auth_token, app
 from models.api_models import AudioRequest
 from Recognizer.engine.get_audio_file import getting_audiofile
-from Recognizer.engine.audio_recognition import offline_recognition
+# from Recognizer.engine.audio_recognition import offline_recognition
 from Recognizer.engine.get_audio_file import del_audio_file
 
 @app.post("/audio_classify")

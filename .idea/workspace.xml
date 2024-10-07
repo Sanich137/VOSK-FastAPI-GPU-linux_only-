@@ -5,40 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="Черновик, основная работа должна вестись под OS Linux.">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/VOSK-FastAPI-GPU(linux_only).iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recognizer/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recognizer/engine/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recognizer/engine/audio_recognition.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recognizer/engine/get_audio_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recognizer/engine/sentensizer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engine/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engine/server_gpu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/audio_classify.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/is_alive.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/root.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/logging.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/pre_start_init.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/states_machine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vosk/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vosk/libvosk.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vosk/libvosk.so.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vosk/transcriber/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vosk/transcriber/cli.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vosk/transcriber/transcriber.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vosk/vosk_cffi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recognizer/engine/batch_audio_recognition.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/api_models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/fast_api_models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/vosk_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/ws_stream_audio_classify.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/ws_tester.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/VOSK-FastAPI-GPU(linux_only).iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/VOSK-FastAPI-GPU(linux_only).iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recognizer/engine/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recognizer/engine/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recognizer/engine/audio_recognition.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/WS_Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/server_gpu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/audio_classify.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/audio_classify.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/is_alive.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/is_alive.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/root.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/root.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/pre_start_init.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/pre_start_init.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/states_machine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vosk/libvosk.so.bak" beforeDir="false" afterPath="$PROJECT_DIR$/vosk/bak_libvosk.so" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,27 +47,44 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Sanich137&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Sanich137/VOSK-FastAPI-GPU-linux_only-.git&quot;,
+    &quot;accountId&quot;: &quot;a3eb78de-75c9-47b3-9d4d-b80325e0a317&quot;
+  }
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2mvKGIvEGcS3Spc91Pe2hchItM8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/kojevnikov/PycharmProjects/VOSK-FastAPI-GPU(linux_only)/models"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.WS_Test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.pre_start_init.executor&quot;: &quot;Run&quot;,
+    &quot;Python.server_gpu.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/mnt/0D7C06C30D7C06C3/PycharmProjects(dualUse)/VOSK-FastAPI-GPU-linux_only-&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="QodanaReportsService">
     <option name="descriptions">
       <ReportDescription localRun="true" path="C:\Users\kojevnikov\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="54cd8026-ea94-4c3b-bd41-576677ff6432" reportId="VOSK-FastAPI-GPU(linux_only)/qodana/2024-10-03" />
@@ -83,18 +92,67 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/trash" />
+      <recent name="$PROJECT_DIR$/models/batch_vosk-model-ru-0.42" />
+      <recent name="$PROJECT_DIR$/vosk" />
+      <recent name="$PROJECT_DIR$/routes" />
       <recent name="C:\Users\kojevnikov\PycharmProjects\VOSK-FastAPI-GPU(linux_only)\models" />
-      <recent name="C:\Users\kojevnikov\PycharmProjects\VOSK-FastAPI-GPU(linux_only)" />
-      <recent name="C:\Users\kojevnikov\PycharmProjects\VOSK-FastAPI-GPU(linux_only)\utils" />
-      <recent name="C:\Users\kojevnikov\PycharmProjects\VOSK-FastAPI-GPU(linux_only)\routes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Recognizer/engine" />
     </key>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-python-sdk-48aec45f0201-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17011.127" />
-      </set>
-    </attachedChunks>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="WS_Test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="VOSK-FastAPI-GPU(linux_only)" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WS_Test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="VOSK-FastAPI-GPU(linux_only)" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.WS_Test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -107,8 +165,32 @@
     </task>
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Черновик, основная работа должна вестись под OS Linux." />
     <option name="LAST_COMMIT_MESSAGE" value="Черновик, основная работа должна вестись под OS Linux." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/vosk/__init__.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/routes/ws_stream_audio_classify.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/WS_Test.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

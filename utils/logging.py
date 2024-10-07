@@ -9,10 +9,9 @@ logging.basicConfig(
     # filename=f'Services-from-{datetime.datetime.now().date()}.log',
     # filemode='a',
     level=os.getenv('LOGGING_LEVEL', 'INFO'),
-    # level=logging.DEBUG,  # Можно заменить на другой уровень логирования.
-    format=os.getenv('LOGGING_FORMAT',  u'#%(levelname)-8s %(filename)s [LINE:%(lineno)d] [%(asctime)s]  %(message)s',
+    format=os.getenv('LOGGING_FORMAT', u'#%(levelname)-8s %(filename)s [LINE:%(lineno)d] [%(asctime)s]  %(message)s',
                      )
-                    )
+    )
 
 logger = logging.getLogger(__name__)
 

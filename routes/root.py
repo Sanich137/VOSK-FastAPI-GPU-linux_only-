@@ -1,5 +1,5 @@
 from utils.pre_start_init import app
-
+import config
 
 @app.get("/")
 async def root():
@@ -8,4 +8,4 @@ async def root():
     return {"error": True,
             "data": "No_service_selected",
             # "available_services": ["Vosk_Recognizer"],
-            "comment": "try_addr: https://law-services.amulex.ru/Classifier/docs"}
+            "comment": f"try_addr: http://{config.host}:{config.port}/docs"}
