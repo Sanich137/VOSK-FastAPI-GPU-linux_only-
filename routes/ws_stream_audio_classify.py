@@ -29,7 +29,7 @@ async def websocket(websocket: WebSocket):
                     logger.info(f"Config - {jobj}", )
                     sample_rate = jobj.get('sample_rate', 8000)
                     wait_null_answers = jobj.get('wait_null_answers', wait_null_answers)
-                    # online_recognizer = BatchRecognizer(model, sample_rate)
+                    online_recognizer = BatchRecognizer(model, sample_rate)
                     continue
                 elif message.get('text') and 'eof' in message.get('text'):
                     break
@@ -47,24 +47,39 @@ async def websocket(websocket: WebSocket):
 
                 if len(result) == 0:
                     if wait_null_answers:
-                        await websocket.send_json({"partial" : "silence"})
+                        send_message = {"silence" : True,
+                                        "data": None,
+                                        "error": None
+                                        }
+                        await websocket.send_json(send_message)
                     else:
-                        print ("sending partials skipped")
+                        logger.debug("sending silence partials skipped")
                         continue
                 else:
-                    await websocket.send_json(result)
+                    send_message = {"silence": False,
+                                    "data": result,
+                                    "error": None
+                                    }
+                    await websocket.send_json(send_message)
                     logger.info(result)
             except Exception as e:
                 logger.error(f'Ошибка при обработке сообщения -  {e}')
         else:
-            await websocket.send_text('{"error" : "Похоже text не строка. Сообщи, проверим"}')
+            send_message = {"silence": False,
+                            "data": None,
+                            "error": "Похоже text не строка. Сообщи, проверим"
+                            }
+            await websocket.send_json(send_message)
 
     while online_recognizer.GetPendingChunks() > 0:
         await asyncio.sleep(0.1)
 
     result = online_recognizer.Result()
-
-    await websocket.send_json(result)
+    send_message = {"silence": False,
+                    "data": result,
+                    "error": None
+                    }
+    await websocket.send_json(send_message)
     logger.info(result)
 
     await websocket.close()
