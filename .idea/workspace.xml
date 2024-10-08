@@ -4,33 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="Черновик, основная работа должна вестись под OS Linux.">
-      <change afterPath="$PROJECT_DIR$/Recognizer/engine/batch_audio_recognition.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/api_models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/fast_api_models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/vosk_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/ws_stream_audio_classify.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/ws_tester.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trash/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/VOSK-FastAPI-GPU(linux_only).iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/VOSK-FastAPI-GPU(linux_only).iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="Запущен сервис.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recognizer/engine/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recognizer/engine/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recognizer/engine/audio_recognition.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/WS_Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/server_gpu.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/audio_classify.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/audio_classify.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/is_alive.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/is_alive.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/root.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/root.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/pre_start_init.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/pre_start_init.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/states_machine.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vosk/libvosk.so.bak" beforeDir="false" afterPath="$PROJECT_DIR$/vosk/bak_libvosk.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/WS_Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/fast_api_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/fast_api_models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/ws_stream_audio_classify.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/ws_stream_audio_classify.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +80,7 @@
       <recent name="$PROJECT_DIR$/Recognizer/engine" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.WS_Test">
     <configuration name="WS_Test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="VOSK-FastAPI-GPU(linux_only)" />
       <option name="ENV_FILES" value="" />
@@ -149,8 +127,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.WS_Test" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -163,6 +141,15 @@
       <option name="presentableId" value="Default" />
       <updated>1727951513006</updated>
     </task>
+    <task id="LOCAL-00001" summary="Запущен сервис.">
+      <option name="closed" value="true" />
+      <created>1728331271374</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728331271374</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -170,7 +157,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Черновик, основная работа должна вестись под OS Linux." />
-    <option name="LAST_COMMIT_MESSAGE" value="Черновик, основная работа должна вестись под OS Linux." />
+    <MESSAGE value="Запущен сервис." />
+    <option name="LAST_COMMIT_MESSAGE" value="Запущен сервис." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -181,14 +169,19 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/routes/ws_stream_audio_classify.py</url>
-          <line>36</line>
-          <option name="timeStamp" value="34" />
+          <url>file://$PROJECT_DIR$/WS_Test.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/WS_Test.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="35" />
+          <line>25</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/routes/ws_stream_audio_classify.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

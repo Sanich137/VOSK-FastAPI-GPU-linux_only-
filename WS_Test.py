@@ -18,19 +18,18 @@ async def run_test(uri):
             "wait_null_answers": wait_null_answers
                 }
         await websocket.send(ujson.dumps({'config':config}, ensure_ascii=True))
-        buffer_size = 6400 # 0.4 seconds of audio, don't make it too small otherwise compute will be slow
+        buffer_size = 12800 # 0.8 seconds of audio, don't make it too small otherwise compute will be slow
+
         while True:
             data = wf.readframes(buffer_size)
             if len(data) == 0:
                 break
-            await websocket.send(data)
-            try:
-                print(await websocket.recv())
-            except:
-                pass
+            else:
+                await websocket.send(data)
+                # print(await websocket.recv())
 
         await websocket.send('{"eof" : 1}')
         print (await websocket.recv())
-
+        await asyncio.sleep(120)
 asyncio.run(run_test('ws://127.0.0.1:49152/ws'))
 

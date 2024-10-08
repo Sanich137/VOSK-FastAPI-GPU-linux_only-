@@ -6,14 +6,13 @@ from models.vosk_model import model
 from vosk import BatchRecognizer, BatchModel, GpuInit
 from models.fast_api_models import WebSocketModel
 
-@app.get("/ws")
-async def get_not_websocket(wsm:WebSocketModel):
-    """Описание для вебсокета"""
-    print(f"{wsm.text}")
-
+@app.post("/ws")
+async def get_not_websocket(ws:WebSocketModel):
+    """Описание для вебсокета ниже в описании WebSocketModel """
+    return f"Прочти инструкцию в Schemas - 'WebSocketModel'"
 
 @app.websocket("/ws")
-async def websocket(websocket: WebSocket, ):
+async def websocket(websocket: WebSocket):
     sample_rate=8000
     online_recognizer = BatchRecognizer(model, sample_rate)
     result = None
@@ -24,35 +23,48 @@ async def websocket(websocket: WebSocket, ):
         message = await websocket.receive()
         # Load configuration if provided
         if isinstance(message, dict) and message.get('text'):
-            if message.get('text') and 'config' in message.get('text'):
-                jobj = ujson.loads(message.get('text'))['config']
-                logger.info(f"Config - {jobj}", )
-                sample_rate = jobj.get('sample_rate', 8000)
-                wait_null_answers = jobj.get('wait_null_answers', wait_null_answers)
-                online_recognizer = BatchRecognizer(model, sample_rate)
-                continue
-            elif message.get('text') and 'eof' in message.get('text'):
+            try:
+                if message.get('text') and 'config' in message.get('text'):
+                    jobj = ujson.loads(message.get('text'))['config']
+                    logger.info(f"Config - {jobj}", )
+                    sample_rate = jobj.get('sample_rate', 8000)
+                    wait_null_answers = jobj.get('wait_null_answers', wait_null_answers)
+                    # online_recognizer = BatchRecognizer(model, sample_rate)
+                    continue
+                elif message.get('text') and 'eof' in message.get('text'):
+                    break
+
+            except Exception as e:
+                logger.error(f'{message} - {e}')
+
+        elif isinstance(message, dict) and message.get('bytes'):
+            try:
+                online_recognizer.AcceptWaveform(message.get('bytes'))
                 while online_recognizer.GetPendingChunks() > 0:
                     await asyncio.sleep(0.1)
-                online_recognizer.FinishStream()
-                break
-        elif isinstance(message, dict) and message.get('bytes'):
-            online_recognizer.AcceptWaveform(message.get('bytes'))
-            while online_recognizer.GetPendingChunks() > 0:
-                await asyncio.sleep(0.1)
-
-            result = online_recognizer.Result()
-            if len(result) == 0:
-                if wait_null_answers:
-                    await websocket.send_text('{"partial" : ""}')
                 else:
-                    await websocket.send_json()
-                    continue
-            else:
-                await websocket.send_text(result)
-                logger.info(result)
+                    result = online_recognizer.Result()
 
+                if len(result) == 0:
+                    if wait_null_answers:
+                        await websocket.send_json({"partial" : "silence"})
+                    else:
+                        print ("sending partials skipped")
+                        continue
+                else:
+                    await websocket.send_json(result)
+                    logger.info(result)
+            except Exception as e:
+                logger.error(f'Ошибка при обработке сообщения -  {e}')
+        else:
+            await websocket.send_text('{"error" : "Похоже text не строка. Сообщи, проверим"}')
+
+    while online_recognizer.GetPendingChunks() > 0:
+        await asyncio.sleep(0.1)
 
     result = online_recognizer.Result()
-    await websocket.send_text(result)
+
+    await websocket.send_json(result)
+    logger.info(result)
+
     await websocket.close()
