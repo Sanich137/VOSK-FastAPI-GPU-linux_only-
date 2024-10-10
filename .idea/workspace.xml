@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="Запущен сервис.">
+    <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="добавлено описание роута">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/WS_Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/ws_stream_audio_classify.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/ws_stream_audio_classify.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,10 +57,11 @@
     "Python.main.executor": "Run",
     "Python.pre_start_init.executor": "Run",
     "Python.server_gpu.executor": "Debug",
+    "Python.ws_stream_audio_classify.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "/mnt/0D7C06C30D7C06C3/PycharmProjects(dualUse)/VOSK-FastAPI-GPU-linux_only-",
+    "last_opened_file_path": "E:/PycharmProjects(dualUse)/VOSK-FastAPI-GPU-linux_only-",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
@@ -77,7 +82,7 @@
       <recent name="$PROJECT_DIR$/Recognizer/engine" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.WS_Test">
     <configuration name="WS_Test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="VOSK-FastAPI-GPU(linux_only)" />
       <option name="ENV_FILES" value="" />
@@ -124,8 +129,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.WS_Test" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728383510190</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="добавлено описание роута">
+      <option name="closed" value="true" />
+      <created>1728384860398</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728384860398</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -174,7 +187,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Черновик, основная работа должна вестись под OS Linux." />
     <MESSAGE value="Запущен сервис." />
-    <option name="LAST_COMMIT_MESSAGE" value="Запущен сервис." />
+    <MESSAGE value="добавлено описание роута" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавлено описание роута" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -185,19 +199,24 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WS_Test.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WS_Test.py</url>
-          <line>25</line>
-          <option name="timeStamp" value="38" />
+          <url>file://$PROJECT_DIR$/routes/ws_stream_audio_classify.py</url>
+          <line>77</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/routes/ws_stream_audio_classify.py</url>
-          <line>76</line>
-          <option name="timeStamp" value="39" />
+          <line>59</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/routes/ws_stream_audio_classify.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/routes/ws_stream_audio_classify.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

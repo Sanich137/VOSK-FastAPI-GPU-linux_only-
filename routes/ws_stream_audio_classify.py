@@ -44,13 +44,15 @@ async def websocket(websocket: WebSocket):
                     await asyncio.sleep(0.1)
                 else:
                     result = online_recognizer.Result()
-
+                    if len(result) > 0:
+                        result = ujson.decode(result)
                 if len(result) == 0:
                     if wait_null_answers:
                         send_message = {"silence" : True,
                                         "data": None,
                                         "error": None
                                         }
+                        logger.info(send_message)
                         await websocket.send_json(send_message)
                     else:
                         logger.debug("sending silence partials skipped")
@@ -60,8 +62,8 @@ async def websocket(websocket: WebSocket):
                                     "data": result,
                                     "error": None
                                     }
+                    logger.error(send_message)
                     await websocket.send_json(send_message)
-                    logger.info(result)
             except Exception as e:
                 logger.error(f'Ошибка при обработке сообщения -  {e}')
         else:
@@ -75,10 +77,14 @@ async def websocket(websocket: WebSocket):
         await asyncio.sleep(0.1)
 
     result = online_recognizer.Result()
+    if len(result) > 0:
+        result = ujson.decode(result)
+
     send_message = {"silence": False,
                     "data": result,
                     "error": None
                     }
+
     await websocket.send_json(send_message)
     logger.info(result)
 
