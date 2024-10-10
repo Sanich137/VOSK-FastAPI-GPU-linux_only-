@@ -3,13 +3,17 @@
 import asyncio
 from asyncio import timeout
 import websockets
+from websockets.exceptions import ConnectionClosedOK
 import sys
 import wave
 import ujson
 
+from utils.logging import logger
+
+
 async def run_test(uri):
     async with websockets.connect(uri) as websocket:
-        wait_null_answers = True
+        wait_null_answers = False
         wf = wave.open("trash//2724.1726990043.1324706.wav", "rb")
         config  = {
             "sample_rate": wf.getframerate(),
@@ -24,11 +28,21 @@ async def run_test(uri):
                 break
             else:
                 await websocket.send(data)
-            print(await websocket.recv())
+
+            try:
+                print(await asyncio.wait_for(websocket.recv(), 0.01))
+                # logger.info(f"Послушали")
+            except TimeoutError:
+                pass
 
         await websocket.send('{"eof" : 1}')
-        print (await websocket.recv())
-        await asyncio.sleep(120)
+
+        while True:
+            try:
+                print(await websocket.recv())
+            except ConnectionClosedOK:
+                print("Connection closed from outer client")
+                break
 
 asyncio.run(run_test('ws://127.0.0.1:49152/ws'))
 

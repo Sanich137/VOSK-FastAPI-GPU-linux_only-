@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="добавлено описание роута">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="Исправлено форматирование result в строку для отправки.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recognizer/engine/batch_audio_recognition.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recognizer/engine/batch_audio_recognition.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WS_Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/WS_Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/ws_stream_audio_classify.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/ws_stream_audio_classify.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/pre_start_init.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/pre_start_init.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +59,7 @@
     "Python.main.executor": "Run",
     "Python.pre_start_init.executor": "Run",
     "Python.server_gpu.executor": "Debug",
-    "Python.ws_stream_audio_classify.executor": "Run",
+    "Python.ws_stream_audio_classify.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
@@ -82,7 +84,7 @@
       <recent name="$PROJECT_DIR$/Recognizer/engine" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.WS_Test">
+  <component name="RunManager" selected="Python.main">
     <configuration name="WS_Test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="VOSK-FastAPI-GPU(linux_only)" />
       <option name="ENV_FILES" value="" />
@@ -129,8 +131,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.WS_Test" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.WS_Test" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728384860398</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Исправлено форматирование result в строку для отправки.">
+      <option name="closed" value="true" />
+      <created>1728577867873</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728577867873</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -188,7 +198,8 @@
     <MESSAGE value="Черновик, основная работа должна вестись под OS Linux." />
     <MESSAGE value="Запущен сервис." />
     <MESSAGE value="добавлено описание роута" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавлено описание роута" />
+    <MESSAGE value="Исправлено форматирование result в строку для отправки." />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлено форматирование result в строку для отправки." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -200,23 +211,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/routes/ws_stream_audio_classify.py</url>
-          <line>77</line>
-          <option name="timeStamp" value="39" />
+          <line>112</line>
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/routes/ws_stream_audio_classify.py</url>
-          <line>59</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/routes/ws_stream_audio_classify.py</url>
-          <line>48</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/routes/ws_stream_audio_classify.py</url>
-          <line>41</line>
-          <option name="timeStamp" value="46" />
+          <line>33</line>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,16 +1,9 @@
 # -*- coding: utf-8 -*-
-from utils.logging import logger
-
-import re
-import json
 import os
+from utils.logging import logger
 from contextlib import asynccontextmanager
 from pathlib import Path
-
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect
-
-auth_token = os.environ.get("AUTH_TOKEN")
-logger.debug(auth_token)
+from fastapi import FastAPI, WebSocket, WebSocketException
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 paths = {
@@ -32,6 +25,6 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan,
               version="0.1",
               docs_url='/docs',
-#               root_path='/root',
+              root_path='/root',
               title='ASR-Vosk-GPU on BatchModel'
               )
