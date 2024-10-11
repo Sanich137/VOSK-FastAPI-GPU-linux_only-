@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="логирование, обработка ошибок.">
+    <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="Переработана обработка result. Искали пустые data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/ws_stream_audio_classify.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/ws_stream_audio_transkrib.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/WS_Test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +79,7 @@
       <recent name="$PROJECT_DIR$/Recognizer/engine" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.WS_Test">
     <configuration name="WS_Test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="VOSK-FastAPI-GPU(linux_only)" />
       <option name="ENV_FILES" value="" />
@@ -126,8 +126,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.WS_Test" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728589255995</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Переработана обработка result. Искали пустые data">
+      <option name="closed" value="true" />
+      <created>1728657308386</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728657308386</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -203,7 +211,8 @@
     <MESSAGE value="добавлено описание роута" />
     <MESSAGE value="Исправлено форматирование result в строку для отправки." />
     <MESSAGE value="логирование, обработка ошибок." />
-    <option name="LAST_COMMIT_MESSAGE" value="логирование, обработка ошибок." />
+    <MESSAGE value="Переработана обработка result. Искали пустые data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Переработана обработка result. Искали пустые data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -215,8 +224,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/routes/ws_stream_audio_transkrib.py</url>
-          <line>41</line>
-          <option name="timeStamp" value="53" />
+          <line>98</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

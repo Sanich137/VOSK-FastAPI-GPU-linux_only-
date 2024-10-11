@@ -44,5 +44,6 @@ async def run_test(uri):
                 print("Connection closed from outer client")
                 break
 
-asyncio.run(run_test('ws://127.0.0.1:49152/ws'))
+asyncio.run(run_test('ws://192.168.100.29:49152/ws'))
+#asyncio.run(run_test('ws://127.0.0.1:49152/ws'))
 

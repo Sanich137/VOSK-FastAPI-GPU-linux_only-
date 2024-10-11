@@ -26,6 +26,7 @@ async def send_messages(_socket, _data=None, _silence=True, _error=None, log_com
     except Exception as e:
         logger.error(f"send_message on '{log_comment}', exception - {e}")
     else:
+        logger.info(snd_mssg)
         is_ok = True
 
     return is_ok
