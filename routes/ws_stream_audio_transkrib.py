@@ -67,13 +67,14 @@ async def websocket(ws: WebSocket):
                 elif message.get('text') and 'eof' in message.get('text'):
                     logger.debug("EOF received")
                     logger.info("EOF received")
+
+                    online_recognizer.FinishStream()
                     break
                 else:
                     logger.error(f"Can`t recognise  text part of  message {message.get('text')}")
 
             except Exception as e:
                 logger.error(f'Error text message compiling. Message:{message} - error:{e}')
-
         elif isinstance(message, dict) and message.get('bytes'):
             try:
                 online_recognizer.AcceptWaveform(message.get('bytes'))
@@ -110,13 +111,13 @@ async def websocket(ws: WebSocket):
                                 if not await send_messages(ws, _silence=False, _data=result, _error=None):
                                     logger.error(f"send_message not ok work canceled")
                                     return
-
         else:
             logger.error(f' Can`t parse message - {message}')
             error = f"Can`t parse message - {message}"
             if not await send_messages(ws, _silence=False, _data=None, _error=error):
                 logger.error(f"send_message not ok work canceled")
                 return
+
 
     while online_recognizer.GetPendingChunks() > 0:
         await asyncio.sleep(0.1)
@@ -134,7 +135,7 @@ async def websocket(ws: WebSocket):
                         return
                 else:
                     logger.debug("sending silence partials skipped")
-            elif len(result.get('text')) < 1:
+            elif 'text' in result and len(ujson.decode(result).get('text')) == 0:
                 logger.debug("No text in result. Skipped")
             else:
                 try:

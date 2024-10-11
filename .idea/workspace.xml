@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="Переработана обработка result. Искали пустые data">
+    <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="добавил логирование в snd_msg">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WS_Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/WS_Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/ws_stream_audio_transkrib.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/ws_stream_audio_transkrib.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logging.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,21 +49,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.WS_Test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pre_start_init.executor&quot;: &quot;Run&quot;,
-    &quot;Python.server_gpu.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.ws_stream_audio_classify.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/PycharmProjects(dualUse)/VOSK-FastAPI-GPU-linux_only-&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.WS_Test.executor": "Run",
+    "Python.__init__.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.pre_start_init.executor": "Run",
+    "Python.server_gpu.executor": "Debug",
+    "Python.ws_stream_audio_classify.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "/mnt/0D7C06C30D7C06C3/PycharmProjects(dualUse)/VOSK-FastAPI-GPU-linux_only-/trash",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="QodanaReportsService">
     <option name="descriptions">
       <ReportDescription localRun="true" path="C:\Users\kojevnikov\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="54cd8026-ea94-4c3b-bd41-576677ff6432" reportId="VOSK-FastAPI-GPU(linux_only)/qodana/2024-10-03" />
@@ -79,7 +81,7 @@
       <recent name="$PROJECT_DIR$/Recognizer/engine" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.WS_Test">
+  <component name="RunManager" selected="Python.main">
     <configuration name="WS_Test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="VOSK-FastAPI-GPU(linux_only)" />
       <option name="ENV_FILES" value="" />
@@ -126,8 +128,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.WS_Test" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.WS_Test" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728657308386</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="добавил логирование в snd_msg">
+      <option name="closed" value="true" />
+      <created>1728658048467</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1728658048467</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -212,7 +222,8 @@
     <MESSAGE value="Исправлено форматирование result в строку для отправки." />
     <MESSAGE value="логирование, обработка ошибок." />
     <MESSAGE value="Переработана обработка result. Искали пустые data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Переработана обработка result. Искали пустые data" />
+    <MESSAGE value="добавил логирование в snd_msg" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил логирование в snd_msg" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -224,8 +235,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/routes/ws_stream_audio_transkrib.py</url>
-          <line>98</line>
-          <option name="timeStamp" value="54" />
+          <line>121</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/routes/ws_stream_audio_transkrib.py</url>
+          <line>125</line>
+          <option name="timeStamp" value="59" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

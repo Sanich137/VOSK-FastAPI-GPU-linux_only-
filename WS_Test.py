@@ -14,7 +14,8 @@ from utils.logging import logger
 async def run_test(uri):
     async with websockets.connect(uri) as websocket:
         wait_null_answers = False
-        wf = wave.open("trash//2724.1726990043.1324706.wav", "rb")
+        # wf = wave.open("trash//2724.1726990043.1324706.wav", "rb")
+        wf = wave.open("trash//q.wav", "rb")
         config  = {
             "sample_rate": wf.getframerate(),
             "wait_null_answers": wait_null_answers
@@ -44,6 +45,6 @@ async def run_test(uri):
                 print("Connection closed from outer client")
                 break
 
-asyncio.run(run_test('ws://192.168.100.29:49152/ws'))
-#asyncio.run(run_test('ws://127.0.0.1:49152/ws'))
+# asyncio.run(run_test('ws://192.168.100.29:49152/ws'))
+asyncio.run(run_test('ws://127.0.0.1:49152/ws'))
 

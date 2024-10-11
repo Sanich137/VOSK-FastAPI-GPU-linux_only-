@@ -6,8 +6,8 @@ import datetime
 from vosk import SetLogLevel
 
 logging.basicConfig(
-    filename=os.getenv('FILENAME', f'GPU-transcriber-{datetime.datetime.now().date()}.log'),
-    filemode=os.getenv('FILEMODE', 'a'),
+    #filename=os.getenv('FILENAME', f'GPU-transcriber-{datetime.datetime.now().date()}.log'),
+    #filemode=os.getenv('FILEMODE', 'a'),
     level=os.getenv('LOGGING_LEVEL', 'INFO'),
     format=os.getenv('LOGGING_FORMAT', u'#%(levelname)-8s %(filename)s [LINE:%(lineno)d] [%(asctime)s]  %(message)s')
     )
