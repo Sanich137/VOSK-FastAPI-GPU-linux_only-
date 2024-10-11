@@ -26,6 +26,7 @@ async def send_messages(_socket, _data=None, _silence=True, _error=None, log_com
     except Exception as e:
         logger.error(f"send_message on '{log_comment}', exception - {e}")
     else:
+        logger.debug(snd_mssg)
         logger.info(snd_mssg)
         is_ok = True
 
@@ -53,7 +54,8 @@ async def websocket(ws: WebSocket):
             logger.error(f"receive WebSocketException - {wse}")
             return
 
-        # Load configuration if provided
+        logger.debug(f'Raw message - {message}')
+
         if isinstance(message, dict) and message.get('text'):
             try:
                 if message.get('text') and 'config' in message.get('text'):
@@ -61,13 +63,10 @@ async def websocket(ws: WebSocket):
                     sample_rate = json_cfg.get('sample_rate', 8000)
                     wait_null_answers = json_cfg.get('wait_null_answers', wait_null_answers)
                     online_recognizer = BatchRecognizer(model, sample_rate)
-                    logger.debug(f"Task received, config -  {json_cfg}")
-                    logger.info(f"Task received, config -  {json_cfg}")
+                    logger.info(f"\n Task received, config -  {message.get('text') }")
                     continue
                 elif message.get('text') and 'eof' in message.get('text'):
-                    logger.debug("EOF received")
-                    logger.info("EOF received")
-
+                    logger.debug("EOF received\n")
                     online_recognizer.FinishStream()
                     break
                 else:
@@ -106,14 +105,16 @@ async def websocket(ws: WebSocket):
                             try:
                                 result = ujson.decode(result)
                             except Exception as e:
-                                logger.error(f"result to str decoding error {e}")
+                                logger.error(f"result to dict decoding error {e}")
                             else:
                                 if not await send_messages(ws, _silence=False, _data=result, _error=None):
                                     logger.error(f"send_message not ok work canceled")
                                     return
         else:
-            logger.error(f' Can`t parse message - {message}')
+
             error = f"Can`t parse message - {message}"
+            logger.error(error)
+
             if not await send_messages(ws, _silence=False, _data=None, _error=error):
                 logger.error(f"send_message not ok work canceled")
                 return
@@ -126,7 +127,6 @@ async def websocket(ws: WebSocket):
             result = online_recognizer.Result()
         except Exception as e:
             logger.error(f"online_recognizer.Result() error - {e}")
-
         else:
             if len(result) == 0:
                 if wait_null_answers:
@@ -141,7 +141,7 @@ async def websocket(ws: WebSocket):
                 try:
                     result = ujson.decode(result)
                 except Exception as e:
-                    logger.error(f"result to str decoding error {e}")
+                    logger.error(f"result to dict decoding error {e}")
                 else:
                     if not await send_messages(ws, _silence=False, _data=result, _error=None):
                         logger.error(f"send_message not ok work canceled")

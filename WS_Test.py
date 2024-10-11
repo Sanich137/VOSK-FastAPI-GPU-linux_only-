@@ -8,8 +8,6 @@ import sys
 import wave
 import ujson
 
-from utils.logging import logger
-
 
 async def run_test(uri):
     async with websockets.connect(uri) as websocket:

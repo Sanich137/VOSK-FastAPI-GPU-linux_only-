@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
+
 import os
 from utils.logging import logger
 from contextlib import asynccontextmanager
 from pathlib import Path
 from fastapi import FastAPI, WebSocket, WebSocketException
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 paths = {
@@ -17,10 +19,10 @@ paths = {
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # on_start
-    logger.debug("Приложение запущено")
+    logger.debug("Приложение  FastAPI запущено")
     # await state_audio_classifier.infinity_worker()
     yield  # on_stop
-    logger.debug("Приложение завершено")
+    logger.debug("Приложение FastAPI завершено")
 
 app = FastAPI(lifespan=lifespan,
               version="0.1",
