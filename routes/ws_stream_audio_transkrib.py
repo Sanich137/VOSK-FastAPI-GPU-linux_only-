@@ -14,12 +14,13 @@ from models.fast_api_models import WebSocketModel
 
 
 
-async def send_messages(_socket, _data=None, _silence=True, _error=None, log_comment=None):
+async def send_messages(_socket, _data=None, _silence=True, _error=None, log_comment=None, _last_message=False):
     ws = _socket
     is_ok = False
     snd_mssg = {"silence": _silence,
                     "data": _data,
-                    "error": _error
+                    "error": _error,
+                    "last_message": _last_message
                     }
     try:
         await ws.send_json(snd_mssg)
@@ -146,5 +147,8 @@ async def websocket(ws: WebSocket):
                     if not await send_messages(ws, _silence=False, _data=result, _error=None):
                         logger.error(f"send_message not ok work canceled")
                         return
+
+    if not await send_messages(ws, _last_message=True):
+        logger.error(f"send_message not ok work canceled")
 
     await ws.close()
