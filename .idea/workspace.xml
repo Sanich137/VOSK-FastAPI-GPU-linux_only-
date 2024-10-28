@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="Исправил проглатывание послденей фразы">
+    <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="Добавлен признак _last_message">
       <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/StartWSservice.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WS_Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/WS_Test.py" afterDir="false" />
@@ -109,8 +109,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.WS_Test" />
       <item itemvalue="Python.StartWSservice" />
+      <item itemvalue="Python.WS_Test" />
     </list>
     <recent_temporary>
       <list>
@@ -191,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728662262649</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Добавлен признак _last_message">
+      <option name="closed" value="true" />
+      <created>1729874897214</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1729874897214</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -217,7 +225,8 @@
     <MESSAGE value="Переработана обработка result. Искали пустые data" />
     <MESSAGE value="добавил логирование в snd_msg" />
     <MESSAGE value="Исправил проглатывание послденей фразы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправил проглатывание послденей фразы" />
+    <MESSAGE value="Добавлен признак _last_message" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен признак _last_message" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

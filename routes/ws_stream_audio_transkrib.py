@@ -144,11 +144,8 @@ async def websocket(ws: WebSocket):
                 except Exception as e:
                     logger.error(f"result to dict decoding error {e}")
                 else:
-                    if not await send_messages(ws, _silence=False, _data=result, _error=None):
+                    if not await send_messages(ws, _silence=False, _data=result, _error=None, _last_message=True):
                         logger.error(f"send_message not ok work canceled")
                         return
-
-    if not await send_messages(ws, _last_message=True):
-        logger.error(f"send_message not ok work canceled")
 
     await ws.close()
