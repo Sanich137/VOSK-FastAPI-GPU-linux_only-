@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="Добавлен признак _last_message">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/StartWSservice.xml" afterDir="false" />
+    <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="Признак _last_message направляется с последним сообщением, но а не дополнительно.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WS_Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/WS_Test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/ws_stream_audio_transkrib.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/ws_stream_audio_transkrib.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/pre_start_init.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/pre_start_init.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +61,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/mnt/0D7C06C30D7C06C3/PycharmProjects(dualUse)/VOSK-FastAPI-GPU-linux_only-/trash&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/PycharmProjects(dualUse)/VOSK-FastAPI-GPU-linux_only-&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
@@ -85,7 +82,7 @@
       <recent name="$PROJECT_DIR$/Recognizer/engine" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.WS_Test">
+  <component name="RunManager" selected="Python.StartWSservice">
     <configuration name="WS_Test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="VOSK-FastAPI-GPU(linux_only)" />
       <option name="ENV_FILES" value="" />
@@ -199,7 +196,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729874897214</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Признак _last_message направляется с последним сообщением, но а не дополнительно.">
+      <option name="closed" value="true" />
+      <created>1730105073589</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1730105073589</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -226,7 +231,8 @@
     <MESSAGE value="добавил логирование в snd_msg" />
     <MESSAGE value="Исправил проглатывание послденей фразы" />
     <MESSAGE value="Добавлен признак _last_message" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлен признак _last_message" />
+    <MESSAGE value="Признак _last_message направляется с последним сообщением, но а не дополнительно." />
+    <option name="LAST_COMMIT_MESSAGE" value="Признак _last_message направляется с последним сообщением, но а не дополнительно." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

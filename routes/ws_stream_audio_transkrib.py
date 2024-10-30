@@ -68,7 +68,6 @@ async def websocket(ws: WebSocket):
                     continue
                 elif message.get('text') and 'eof' in message.get('text'):
                     logger.debug("EOF received\n")
-                    online_recognizer.FinishStream()
                     break
                 else:
                     logger.error(f"Can`t recognise  text part of  message {message.get('text')}")
@@ -95,6 +94,7 @@ async def websocket(ws: WebSocket):
                                 if not await send_messages(ws, _silence = True, _data = None, _error = None):
                                     logger.error(f"send_message not ok work canceled")
                                     return
+                                await asyncio.sleep(1)
                             else:
                                 logger.debug("sending silence partials skipped")
                                 continue
@@ -124,28 +124,28 @@ async def websocket(ws: WebSocket):
     while online_recognizer.GetPendingChunks() > 0:
         await asyncio.sleep(0.1)
     else:
+        online_recognizer.FinishStream()
         try:
             result = online_recognizer.Result()
         except Exception as e:
             logger.error(f"online_recognizer.Result() error - {e}")
         else:
             if len(result) == 0:
-                if wait_null_answers:
-                    if not await send_messages(ws, _silence=True, _data=None, _error=None):
-                        logger.error(f"send_message not ok work canceled")
-                        return
-                else:
-                    logger.debug("sending silence partials skipped")
+                is_silence = True
+                result = None
             elif 'text' in result and len(ujson.decode(result).get('text')) == 0:
                 logger.debug("No text in result. Skipped")
+                is_silence = False
+                result = None
             else:
+                is_silence = False
                 try:
                     result = ujson.decode(result)
                 except Exception as e:
                     logger.error(f"result to dict decoding error {e}")
-                else:
-                    if not await send_messages(ws, _silence=False, _data=result, _error=None, _last_message=True):
-                        logger.error(f"send_message not ok work canceled")
-                        return
+
+            if not await send_messages(ws, _silence=is_silence, _data=result, _error=None, _last_message=True):
+                logger.error(f"send_message not ok work canceled")
+                return
 
     await ws.close()
