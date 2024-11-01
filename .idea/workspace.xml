@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="Признак _last_message направляется с последним сообщением, но а не дополнительно.">
+    <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="исправил отправку последнего сообщения. Если последние секунды были тишиной, то сервер не отправлял ласт мессадж - тру.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WS_Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/WS_Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/ws_stream_audio_transkrib.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/ws_stream_audio_transkrib.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,23 +46,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.StartWSservice.executor&quot;: &quot;Run&quot;,
-    &quot;Python.WS_Test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pre_start_init.executor&quot;: &quot;Run&quot;,
-    &quot;Python.server_gpu.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.ws_stream_audio_classify.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/PycharmProjects(dualUse)/VOSK-FastAPI-GPU-linux_only-&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.StartWSservice.executor": "Run",
+    "Python.WS_Test.executor": "Run",
+    "Python.__init__.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.pre_start_init.executor": "Run",
+    "Python.server_gpu.executor": "Debug",
+    "Python.ws_stream_audio_classify.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "F:/PycharmProjects(dualUse)/VOSK-FastAPI-GPU-linux_only-",
+    "settings.editor.selected.configurable": "terminal"
   }
-}</component>
+}]]></component>
   <component name="QodanaReportsService">
     <option name="descriptions">
       <ReportDescription localRun="true" path="C:\Users\kojevnikov\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="54cd8026-ea94-4c3b-bd41-576677ff6432" reportId="VOSK-FastAPI-GPU(linux_only)/qodana/2024-10-03" />
@@ -116,6 +114,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="" />
@@ -204,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730105073589</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="исправил отправку последнего сообщения. Если последние секунды были тишиной, то сервер не отправлял ласт мессадж - тру.">
+      <option name="closed" value="true" />
+      <created>1730312757007</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1730312757007</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -232,7 +241,8 @@
     <MESSAGE value="Исправил проглатывание послденей фразы" />
     <MESSAGE value="Добавлен признак _last_message" />
     <MESSAGE value="Признак _last_message направляется с последним сообщением, но а не дополнительно." />
-    <option name="LAST_COMMIT_MESSAGE" value="Признак _last_message направляется с последним сообщением, но а не дополнительно." />
+    <MESSAGE value="исправил отправку последнего сообщения. Если последние секунды были тишиной, то сервер не отправлял ласт мессадж - тру." />
+    <option name="LAST_COMMIT_MESSAGE" value="исправил отправку последнего сообщения. Если последние секунды были тишиной, то сервер не отправлял ласт мессадж - тру." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

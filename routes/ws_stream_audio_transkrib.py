@@ -65,6 +65,8 @@ async def websocket(ws: WebSocket):
                     wait_null_answers = json_cfg.get('wait_null_answers', wait_null_answers)
                     online_recognizer = BatchRecognizer(model, sample_rate)
                     logger.info(f"\n Task received, config -  {message.get('text') }")
+                    logger.debug(f"\n Received, config full message -  {message}")
+
                     continue
                 elif message.get('text') and 'eof' in message.get('text'):
                     logger.debug("EOF received\n")
