@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="исправил отправку последнего сообщения. Если последние секунды были тишиной, то сервер не отправлял ласт мессадж - тру.">
+    <list default="true" id="0c431da2-1417-42ca-8de4-1b97691f08b4" name="Changes" comment="добавил при логировании в дебаг - номер канала">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/ws_stream_audio_transkrib.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/ws_stream_audio_transkrib.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730312757007</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="добавил при логировании в дебаг - номер канала">
+      <option name="closed" value="true" />
+      <created>1730458874630</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1730458874630</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -242,7 +251,8 @@
     <MESSAGE value="Добавлен признак _last_message" />
     <MESSAGE value="Признак _last_message направляется с последним сообщением, но а не дополнительно." />
     <MESSAGE value="исправил отправку последнего сообщения. Если последние секунды были тишиной, то сервер не отправлял ласт мессадж - тру." />
-    <option name="LAST_COMMIT_MESSAGE" value="исправил отправку последнего сообщения. Если последние секунды были тишиной, то сервер не отправлял ласт мессадж - тру." />
+    <MESSAGE value="добавил при логировании в дебаг - номер канала" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил при логировании в дебаг - номер канала" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
